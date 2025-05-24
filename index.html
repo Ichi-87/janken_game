@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>じゃんけんゲーム - ドットクエスト風</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>じゃんけんクエスト</h1>
+      </header>
+
+      <div id="game-area">
+        <div id="computer-area">
+          <h2>モンスター</h2>
+          <div id="computer-hand-display" class="hand-display">
+            {/* JavaScriptで画像を設定 */}
+          </div>
+        </div>
+
+        <div id="player-area">
+          <h2>あなた</h2>
+          <div id="player-hand-display" class="hand-display">
+            {/* JavaScriptで画像を設定 */}
+          </div>
+          <div id="player-actions">
+            <button id="rock" class="action-button">グー</button>
+            <button id="scissors" class="action-button">チョキ</button>
+            <button id="paper" class="action-button">パー</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="result-area">
+        <p>結果：<span id="result"></span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

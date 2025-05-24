@@ -1,0 +1,115 @@
+body {
+  font-family: 'DotGothic16', sans-serif; /* ドット絵風フォント */
+  background-color: #222; /* 暗めの背景色 */
+  color: #fff; /* 白文字 */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px; /* ゲーム画面の最大幅 */
+  border: 3px solid #fff; /* ドラクエ風のウィンドウ枠線をイメージ */
+  padding: 20px;
+  background-color: #000; /* ウィンドウ内の背景 */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* 少し光る感じ */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em; /* 少し大きめに */
+}
+
+#game-area {
+  display: flex; /* 横並びに配置 */
+  justify-content: space-around; /* 要素間にスペースを均等に配置 */
+  margin-bottom: 20px;
+  min-height: 200px; /* 手の表示エリアの高さを確保 */
+}
+
+#computer-area,
+#player-area {
+  width: 45%; /* 各エリアの幅 */
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #888; /* 各エリアの枠線 */
+}
+
+#computer-area h2,
+#player-area h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+.hand-display {
+  width: 120px; /* 画像の表示サイズに合わせて調整してください */
+  height: 120px; /* 画像の表示サイズに合わせて調整してください */
+  /* background-color: #444; */ /* ← 削除またはコメントアウト */
+  margin: 15px auto;
+  border: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 0.8em; */ /* ← 削除またはコメントアウト */
+  /* color: #aaa; */ /* ← 削除またはコメントアウト */
+  overflow: hidden; /* 画像がはみ出た場合に隠す */
+}
+
+.hand-display img { /* hand-display 内の img タグに対するスタイル */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* アスペクト比を保ちつつ、エリア内に収まるように表示 */
+}
+
+#player-actions {
+  margin-top: 20px;
+}
+
+.action-button {
+  font-family: 'DotGothic16', sans-serif; /* ボタンにもフォント適用 */
+  background-color: #555;
+  color: #fff;
+  border: 2px solid #aaa;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s; /* ホバー時のアニメーション用 */
+}
+
+.action-button:hover {
+  background-color: #777;
+  border-color: #fff;
+}
+
+#result-area {
+  text-align: center;
+  padding: 15px;
+  border: 2px solid #fff;
+  background-color: #111;
+  font-size: 1.5em;
+}
+
+#result-area p {
+  margin: 0;
+}
+
+/* 仮のテキスト用 (script.js修正後、不要になるものもあります) */
+#computer-hand-text {
+  font-style: italic;
+  color: #ccc;
+}
